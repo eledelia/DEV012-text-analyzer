@@ -1,21 +1,65 @@
-const analyzer = {  
+const analyzer = {
   getWordCount: (text) => {
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    if (text === "") {
+      return 0;
+    } else {
+      const palabras = text.split(/\s+/);
+      return palabras.length;
+    }
   },
   getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    const character = text.length;
+    return character;
   },
+
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const textFiltrado = text.replace(/[^\w\d]/g, "");
+    if (text === "") {
+      return 0;
+    } else {
+      const character = textFiltrado.length;
+      return character;
+    }
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+
+  getAverageWordLength: (text) => {
+    const words = text.split(/\s+/);
+    let SumWords = 0;
+    if (text === "") {
+      return 0;
+    } else {
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i].length;
+        SumWords += word;
+      }
+      const average = SumWords / words.length;
+      return average.toFixed(2);
+    }
   },
   getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    let number = 0;
+
+    for (let i = 0; i < text.length; i++) {
+      const caracter = text[i];
+      if (!isNaN(parseInt(caracter))) {
+        number++;
+      }
+    }
+
+    return number;
   },
+
   getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    let number = 0;
+
+    for (let i = 0; i < text.length; i++) {
+      const caracter = text[i];
+      if (!isNaN(parseInt(caracter))) {
+        number += parseInt(caracter);
+      }
+    }
+
+    return number;
   },
 };
 
