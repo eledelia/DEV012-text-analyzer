@@ -34,7 +34,6 @@ const analyzer = {
 
     if (matches) {
       for (const match of matches) {
-        // Intenta convertir a número solo si el match sigue el formato X.Y
         if (/^\d+(\.\d+)?$/.test(match)) {
           sum++;
         }
@@ -52,7 +51,6 @@ const analyzer = {
 
     if (matches) {
       for (const match of matches) {
-        // Intenta convertir a número solo si el match sigue el formato X.Y
         if (/^\d+(\.\d+)?$/.test(match)) {
           sum += parseFloat(match);
         }
