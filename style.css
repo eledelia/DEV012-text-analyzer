@@ -1,0 +1,110 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffe6f6;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  color: rgb(162, 33, 93);
+  font-family: "Courier New", Courier, monospace;
+  font-style: blank;
+  text-align: italic;
+  background-color: #ffe6f6;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  height: 50%;
+  width: 50%;
+  font-size: 45px;
+  background-color: #ffe6f6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffe6f6;
+  margin-bottom: 60px;
+}
+.lista {
+  display: grid;
+  width: 500px;
+  gap: 20px;
+  width: 500px;
+  gap: 10px;
+  font-weight: 100;
+  height: 150px;
+  display: flex;
+  align-content: stretch;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.cuenta {
+  border: 2px solid #3a021c;
+  border-radius: 15px;
+  display: flex;
+  color: azure;
+  background-color: #b01550;
+  width: 100px;
+  height: 40px;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+textarea[name="user-input"] {
+  height: 250px;
+  width: 500px;
+  display: flex;
+  padding: 20px;
+  margin-top: 20px;
+  resize: none;
+  font-size: 18px;
+}
+
+#reset-button {
+  margin-top: 50px;
+  background-color: #b01550;
+  padding: 10px 20px;
+  border: 40px;
+  color: azure;
+  border-radius: 15px;
+  font-size: 15px;
+}
+#reset-button:hover {
+  background-color: #000;
+}
+
+footer {
+  color: #b01550;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 19px;
+  background-color: #ffe6f6;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
