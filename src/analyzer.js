@@ -1,12 +1,16 @@
 const analyzer = {
+  
   getWordCount: (text) => {
-    if (text === "") {
+    if (text.trim() === "") {
       return 0;
-    } else {
-      const palabras = text.split(/\s+/);
-      return palabras.length;
     }
+  
+    const wordRegex = /\S+/g;
+    const matches = text.match(wordRegex);
+  
+    return matches ? matches.length : 0;
   },
+  
   getCharacterCount: (text) => {
     const character = text.length;
     return character;
@@ -22,44 +26,56 @@ const analyzer = {
     }
   },
 
-  getAverageWordLength: (text) => {
-    const words = text.split(/\s+/);
-    let SumWords = 0;
-    if (text === "") {
-      return 0;
-    } else {
-      for (let i = 0; i < words.length; i++) {
-        const word = words[i].length;
-        SumWords += word;
-      }
-      const average = SumWords / words.length;
-      return average.toFixed(2);
-    }
-  },
   getNumberCount: (text) => {
-    let number = 0;
+    const regexNum = /\b\d+(\.\d+)?\b/g;
+    const matches = text.match(regexNum);
 
-    for (let i = 0; i < text.length; i++) {
-      const caracter = text[i];
-      if (!isNaN(parseInt(caracter))) {
-        number++;
+    let sum = 0;
+
+    if (matches) {
+      for (const match of matches) {
+        // Intenta convertir a número solo si el match sigue el formato X.Y
+        if (/^\d+(\.\d+)?$/.test(match)) {
+          sum++;
+        }
       }
     }
 
-    return number;
+    return sum;
   },
 
   getNumberSum: (text) => {
-    let number = 0;
+    const regexNum = /\b\d+(\.\d+)?\b/g;
+    const matches = text.match(regexNum);
 
-    for (let i = 0; i < text.length; i++) {
-      const caracter = text[i];
-      if (!isNaN(parseInt(caracter))) {
-        number += parseInt(caracter);
+    let sum = 0;
+
+    if (matches) {
+      for (const match of matches) {
+        // Intenta convertir a número solo si el match sigue el formato X.Y
+        if (/^\d+(\.\d+)?$/.test(match)) {
+          sum += parseFloat(match);
+        }
       }
     }
 
-    return number;
+    return sum;
+  },
+
+  getAverageWordLength: (text) => {
+    const words = text.split(/\s+/);
+    const wordsToConsiderate = words.filter((words) => words.trim().length > 0);
+    let SumWords = 0;
+    if (wordsToConsiderate === "") {
+      return 0;
+    } else {
+      for (let i = 0; i < wordsToConsiderate.length; i++) {
+        const word = wordsToConsiderate[i].length;
+        SumWords += word;
+      }
+      const average = SumWords / words.length;
+      return parseFloat(average.toFixed(2));
+    }
   },
 };
 
