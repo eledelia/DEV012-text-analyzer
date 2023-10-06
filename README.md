@@ -33,7 +33,7 @@ Sobre su diseño, el primer prototipo fue bastante básico, centrado en delimita
 Para llegar al prototipo final se hicieron diversos cambios en la estructura del del Analizador de Texto, así como también en su paleta de colores. Además, también se contó con el feedback de varias usuarias, quienes sugirieron cambios en tonalidades y tamaño de fuente, hasta al fin llegar al diseño definitivo centrado en dar satisfacción a nuestras clientas.
 
 
-<img src="src/prototipo1.jpg" alt="Prototipo 1">
+<img src="src/prototipo2.jpg" alt="Prototipo 2">
 
 
 
