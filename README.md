@@ -22,7 +22,7 @@ Además, cuenta con un botón para limpiar la caja de texto y a su vez las métr
 
 Sobre su diseño, el primer prototipo fue bastante básico, centrado en delimitar los espacios y estructura que tendría el Analizador de Texto. Para esto se utilizó una paleta de colores bastante fuerte, haciendo así mas notoria la delimitación. 
 
-//![Alt text][prototipo-1.jpg]
+![Alt text][prototipo-1.jpg]
 
 
 
@@ -33,7 +33,7 @@ Sobre su diseño, el primer prototipo fue bastante básico, centrado en delimita
 Para llegar al prototipo final se hicieron diversos cambios en la estructura del del Analizador de Texto, así como también en su paleta de colores. Además, también se contó con el feedback de varias usuarias, quienes sugirieron cambios en tonalidades y tamaño de fuente, hasta al fin llegar al diseño definitivo centrado en dar satisfacción a nuestras clientas.
 
 
-//![Alt text][prototipo-2.jpg]
+![Alt text][prototipo-2.jpg]
 
 
 
